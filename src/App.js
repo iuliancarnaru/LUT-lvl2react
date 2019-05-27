@@ -1,7 +1,7 @@
 import React from "react";
 //import React, { Fragment } from "react";
 import Toggle from "./ToggleRPC";
-import Portal from "./Portal";
+import Modal from "./Modal";
 
 function App() {
   return (
@@ -23,7 +23,7 @@ function App() {
             </div>
           )}
         /> */}
-        <Toggle>
+        {/* <Toggle>
           {({ on, toggle }) => (
             // <Fragment>
             //   {on && <h1>Show me</h1>}
@@ -34,6 +34,16 @@ function App() {
               {on && <h1>Show me</h1>}
               <Portal>{on && <h1>Show me from Portal</h1>}</Portal>
               <button onClick={toggle}>Show / Hide</button>
+            </>
+          )}
+        </Toggle> */}
+        <Toggle>
+          {({ on, toggle }) => (
+            <>
+              <button onClick={toggle}>Open</button>
+              <Modal on={on} toggle={toggle}>
+                <h1>Still in modal</h1>
+              </Modal>
             </>
           )}
         </Toggle>
