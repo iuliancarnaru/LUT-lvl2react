@@ -1,5 +1,6 @@
 import React from "react";
-import { Toggle, Modal } from "./Utilities/index";
+import { Toggle} from "Utilities";
+import { Modal } from "Elements";
 
 function App() {
   return (
